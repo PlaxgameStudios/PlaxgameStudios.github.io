@@ -1,4 +1,4 @@
-/* Reset de m醨genes y padding */
+/* Reset de m谩rgenes y padding */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body {
     padding-top: 50px;
 }
 
-/* Barra de Navegaci髇 */
+/* Barra de Navegaci贸n */
 header {
     position: fixed;
     width: 100%;
@@ -52,7 +52,7 @@ nav ul li a:hover {
     color: #00aaff;
 }
 
-/* Secci髇 de Bienvenida */
+/* Secci贸n de Bienvenida */
 .hero {
     background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
     color: #fff;
@@ -87,7 +87,7 @@ nav ul li a:hover {
     background-color: #007799;
 }
 
-/* Secci髇 general */
+/* Secci贸n general */
 section {
     padding: 60px 20px;
 }
@@ -102,7 +102,7 @@ p {
     margin-bottom: 20px;
 }
 
-/* Secci髇 de Noticias */
+/* Secci贸n de Noticias */
 .news-cards {
     display: flex;
     justify-content: space-between;
@@ -134,7 +134,7 @@ p {
     transform: translateY(0);
 }
 
-/* Secci髇 de Contacto */
+/* Secci贸n de Contacto */
 a {
     color: #00aaff;
     text-decoration: none;
@@ -144,7 +144,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Pie de P醙ina */
+/* Pie de P谩gina */
 footer {
     background-color: #111;
     color: #888;
@@ -168,3 +168,25 @@ section {
     opacity: 0;
     transform: translateY(50px);
 }
+
+/* Estilo para el bot贸n de "Scroll to Top" */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: none; /* Oculto por defecto */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: #007799;
+    }
+    
