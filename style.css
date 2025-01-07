@@ -87,6 +87,69 @@ nav ul li a:hover {
     background-color: #007799;
 }
 
+/* Sección de Videojuegos */
+#videojuegos {
+    background-color: #222;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.game-card {
+    background: #333;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.game-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.game-card p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+/* Sección de Redes Sociales */
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+.social-media a:hover {
+    color: #00aaff;
+}
+
+/* Galería */
+.gallery img {
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+}
+
+/* Estilos generales */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #111;
+    color: #ddd;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
 /* Sección general */
 section {
     padding: 60px 20px;
