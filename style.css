@@ -416,3 +416,27 @@ p {
 .news-card p {
     font-size: 
 
+/* Sección de Videos */
+#videos {
+    background-color: #222;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.video-gallery iframe {
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo de redes sociales */
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+.social-media a:hover {
+    color: #00aaff;
+}
