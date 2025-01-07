@@ -169,7 +169,28 @@ section {
     transform: translateY(50px);
 }
 
-/* Estilo para el botón de "Scroll to Top" */
+/* Estilos para la barra de navegación cuando se hace scroll */
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);  /* Fondo oscuro cuando se hace scroll */
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo de animación para las imágenes */
+.gallery img {
+    transition: transform 0.3s ease;
+}
+
+/* Efecto para los elementos que usan fade */
+.fade {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.fade.visible {
+    opacity: 1;
+}
+
+/* Estilos para el botón Scroll to Top */
 .scroll-to-top {
     position: fixed;
     bottom: 20px;
@@ -188,7 +209,8 @@ section {
 
 .scroll-to-top:hover {
     background-color: #007799;
-    }
+}
+
 
 /* Reset de márgenes y padding */
 * {
