@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plaxgame Studios - Desarrollo de videojuegos, noticias y novedades.">
+    <title>Plaxgame Studios - Desarrollo de Videojuegos</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Añadir una fuente personalizada de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Plaxgame Studios Logo" />
+            </div>
+            <ul>
+                <li><a href="#bienvenida">Bienvenida</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Bienvenida -->
+    <section id="bienvenida" class="hero">
+        <div class="container">
+            <h1>Bienvenido a Plaxgame Studios</h1>
+            <p>Creando mundos, contando historias, y llevando la experiencia de los videojuegos a otro nivel.</p>
+            <a href="#noticias" class="cta-button">Ver Novedades</a>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="sobre-nosotros">
+        <div class="container">
+            <h2>¿Quiénes somos?</h2>
+            <p>En **Plaxgame Studios**, nuestra pasión por los videojuegos se combina con la creatividad y la innovación. Desde el concepto hasta el código, nos dedicamos a crear experiencias únicas e inolvidables para todos los jugadores.</p>
+        </div>
+    </section>
+
+    <!-- Sección de Noticias -->
+    <section id="noticias">
+        <div class="container">
+            <h2>Últimas Noticias</h2>
+            <div class="news-cards">
+                <div class="news-card">
+                    <h3>Nuevo Proyecto en Desarrollo</h3>
+                    <p>Estamos trabajando en un videojuego de aventuras que cambiará la forma en que experimentas las historias interactivas. ¡Más detalles pronto!</p>
+                </div>
+                <div class="news-card">
+                    <h3>Actualización de Motor de Juego</h3>
+                    <p>Hemos actualizado nuestro motor gráfico para incluir nuevas características que mejorarán la jugabilidad y la estética visual de nuestros proyectos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>¿Tienes preguntas o sugerencias? ¡Nos encantaría saber de ti!</p>
+            <p>Email: <a href="mailto:contacto@plaxgamestudios.com">contacto@plaxgamestudios.com</a></p>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2025 Plaxgame Studios. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para animaciones al hacer scroll -->
+    <script>
+        // Añadimos un poco de animación con scroll
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
