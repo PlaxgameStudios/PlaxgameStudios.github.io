@@ -1,45 +1,51 @@
-// Esperar a que el DOM esté completamente cargado
-document.addEventListener("DOMContentLoaded", function() {
-
-    // Efecto de animación al hacer scroll
-    const sections = document.querySelectorAll('section');
+// Esperar a que el DOM estÃ© completamente cargado
+document.addEventListener("DOMContentLoaded", () => {
     
-    const observer = new IntersectionObserver((entries, observer) => {
+    // Animaciones de Scroll para secciones
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
             }
         });
-    }, { threshold: 0.5 }); // Hacer visible cuando el 50% de la sección esté visible
+    }, { threshold: 0.5 }); // Hacer visible cuando el 50% de la secciÃ³n estÃ© visible
 
-    // Observamos todas las secciones
     sections.forEach(section => {
         observer.observe(section);
     });
 
-    // Efecto para el menú de navegación
+    // Efecto para el menÃº de navegaciÃ³n (cuando se hace scroll)
+    const nav = document.querySelector('header');
     const navLinks = document.querySelectorAll('nav ul li a');
     
-    // Cambiar color de los enlaces de navegación al hacer hover
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+
+    // Efecto para enlaces de navegaciÃ³n (hover)
     navLinks.forEach(link => {
         link.addEventListener('mouseover', () => {
-            link.style.color = '#00aaff';  // Cambiar el color al pasar el mouse
+            link.style.color = '#00aaff';  // Cambiar color al hacer hover
         });
         link.addEventListener('mouseout', () => {
-            link.style.color = '';  // Restaurar el color original
+            link.style.color = '';  // Restaurar color original
         });
     });
 
-    // Efecto para el botón de llamada a la acción
+    // Mostrar alerta al hacer clic en el botÃ³n CTA
     const ctaButton = document.querySelector('.cta-button');
-    ctaButton.addEventListener('click', (event) => {
-        // Este efecto puede ser utilizado para mostrar un mensaje o hacer otra acción.
-        alert('¡Gracias por interesarte en nuestras novedades!');
+    ctaButton.addEventListener('click', () => {
+        alert('Â¡Gracias por interesarte en nuestras novedades!');
     });
 
-    // Opcional: Efecto de "scroll-to-top" al llegar al final de la página
+    // Agregar botÃ³n "Scroll to Top" cuando se hace scroll
     const scrollButton = document.createElement('button');
-    scrollButton.innerHTML = '?';
+    scrollButton.innerHTML = 'â†‘';
     scrollButton.classList.add('scroll-to-top');
     document.body.appendChild(scrollButton);
 
@@ -47,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Mostrar el botón solo cuando el usuario hace scroll hacia abajo
+    // Mostrar/ocultar el botÃ³n "Scroll to Top" en funciÃ³n del scroll
     window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
             scrollButton.style.display = 'block';
@@ -55,4 +61,24 @@ document.addEventListener("DOMContentLoaded", function() {
             scrollButton.style.display = 'none';
         }
     });
+
+    // Funcionalidad para animaciÃ³n de imÃ¡genes de la galerÃ­a al hacer hover
+    const galleryImages = document.querySelectorAll('.gallery img');
+    galleryImages.forEach(image => {
+        image.addEventListener('mouseover', () => {
+            image.style.transform = 'scale(1.1)';
+            image.style.transition = 'transform 0.3s ease';
+        });
+
+        image.addEventListener('mouseout', () => {
+            image.style.transform = 'scale(1)';
+        });
+    });
+
+    // Efecto de "fade in" para las imÃ¡genes y textos de la galerÃ­a
+    const fadeElements = document.querySelectorAll('.gallery img, .news-card');
+    fadeElements.forEach(element => {
+        element.classList.add('fade');
+    });
 });
+
