@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Plaxgame Studios - Desarrollo de videojuegos, noticias y novedades.">
+    <meta name="description" content="Plaxgame Studios - Desarrollo de videojuegos, noticias, novedades, modelos 3D y arte conceptual.">
     <title>Plaxgame Studios - Desarrollo de Videojuegos</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Añadir una fuente personalizada de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -20,6 +19,8 @@
             <ul>
                 <li><a href="#bienvenida">Bienvenida</a></li>
                 <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#modelos-3d">Modelos 3D</a></li>
+                <li><a href="#arte-conceptual">Arte Conceptual</a></li>
                 <li><a href="#noticias">Noticias</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -39,7 +40,33 @@
     <section id="sobre-nosotros">
         <div class="container">
             <h2>¿Quiénes somos?</h2>
-            <p>En Plaxgame Studios, nuestra pasión por los videojuegos se combina con la creatividad y la innovación. Desde el concepto hasta el código, nos dedicamos a crear experiencias únicas e inolvidables para todos los jugadores.</p>
+            <p>En **Plaxgame Studios**, nuestra pasión por los videojuegos se combina con la creatividad y la innovación. Desde el concepto hasta el código, nos dedicamos a crear experiencias únicas e inolvidables para todos los jugadores.</p>
+        </div>
+    </section>
+
+    <!-- Sección Modelos 3D -->
+    <section id="modelos-3d">
+        <div class="container">
+            <h2>Modelos 3D</h2>
+            <p>En Plaxgame Studios, nos especializamos en crear modelos 3D de alta calidad para nuestros videojuegos, asegurando que cada detalle sea perfecto para ofrecer una experiencia visual impresionante.</p>
+            <div class="gallery">
+                <img src="https://via.placeholder.com/300" alt="Modelo 3D 1">
+                <img src="https://via.placeholder.com/300" alt="Modelo 3D 2">
+                <img src="https://via.placeholder.com/300" alt="Modelo 3D 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Arte Conceptual -->
+    <section id="arte-conceptual">
+        <div class="container">
+            <h2>Arte Conceptual</h2>
+            <p>El arte conceptual es clave para darle vida a nuestros mundos. Aquí te mostramos algunos de los conceptos visuales que guían el desarrollo de nuestros juegos.</p>
+            <div class="gallery">
+                <img src="https://via.placeholder.com/300" alt="Arte Conceptual 1">
+                <img src="https://via.placeholder.com/300" alt="Arte Conceptual 2">
+                <img src="https://via.placeholder.com/300" alt="Arte Conceptual 3">
+            </div>
         </div>
     </section>
 
@@ -66,6 +93,11 @@
             <h2>Contacto</h2>
             <p>¿Tienes preguntas o sugerencias? ¡Nos encantaría saber de ti!</p>
             <p>Email: <a href="mailto:contacto@plaxgamestudios.com">contacto@plaxgamestudios.com</a></p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/PlaxgameStudios" target="_blank">Facebook</a>
+                <a href="https://twitter.com/PlaxgameStudios" target="_blank">Twitter</a>
+                <a href="https://www.instagram.com/PlaxgameStudios" target="_blank">Instagram</a>
+            </div>
         </div>
     </section>
 
@@ -74,21 +106,7 @@
         <p>&copy; 2025 Plaxgame Studios. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Script para animaciones al hacer scroll -->
-    <script>
-        // Añadimos un poco de animación con scroll
-        const sections = document.querySelectorAll('section');
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.5 });
+    <script src="script.js"></script>
 
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
 </body>
 </html>
