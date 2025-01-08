@@ -175,6 +175,12 @@ nav .dropdown-content a:hover {
     font-size: 1.2em;
 }
 
+.social-icon {
+    width: 40px; /* Ajusta el tamaño según lo necesites */
+    height: auto;
+    margin: 0 10px;
+}
+
 .social-media a:hover {
     color: #00aaff;
 }
