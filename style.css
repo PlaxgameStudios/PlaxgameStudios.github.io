@@ -133,6 +133,19 @@ nav .dropdown-content a:hover {
 }
 
 .game-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.game-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.game-card {
     background: #333;
     margin: 20px;
     padding: 20px;
